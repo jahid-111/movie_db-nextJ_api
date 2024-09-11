@@ -1,8 +1,10 @@
+import { getDictionary } from "@/app/[lang]/dictionaries";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const NavAside = () => {
+const NavAside = async ({ lang }) => {
+  const dictionaries = await getDictionary(lang);
   return (
     <aside className=" w-80 h-96 rounded  mt-5">
       <ul className="space-y-2 text-gray-800">
@@ -17,7 +19,7 @@ const NavAside = () => {
               height="24"
               alt=""
             />
-            <span>Trending</span>
+            <span>{dictionaries?.trending}</span>
           </Link>
         </li>
         <li>
@@ -31,7 +33,7 @@ const NavAside = () => {
               height="24"
               alt=""
             />
-            <span>New Releases</span>
+            <span>{dictionaries?.newReleases}</span>
           </a>
         </li>
         <li>
@@ -45,7 +47,7 @@ const NavAside = () => {
               height="24"
               alt=""
             />
-            <span>Coming Soon</span>
+            <span>{dictionaries?.comingSoon}</span>
           </a>
         </li>
         <li>
@@ -59,7 +61,7 @@ const NavAside = () => {
               height="24"
               alt=""
             />
-            <span>Favourites</span>
+            <span>{dictionaries?.favorites}</span>
           </a>
         </li>
         <li>
@@ -73,7 +75,7 @@ const NavAside = () => {
               height="24"
               alt=""
             />
-            <span>Watch Later</span>
+            <span>{dictionaries?.watchLater}</span>
           </a>
         </li>
       </ul>

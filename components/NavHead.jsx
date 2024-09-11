@@ -1,10 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const NavHead = () => {
   return (
-    <nav className="container border-2  border-violet-200 flex items-center justify-between space-x-10 py-6 mx-auto">
+    <nav className="container border-violet-200 flex items-center justify-between space-x-10 py-6 mx-auto">
       <Link href="index.html">
         <Image src="./assets/logo.svg" width="139" height="26" alt="" />
       </Link>
