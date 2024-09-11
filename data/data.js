@@ -418,7 +418,7 @@ const updateDataApi = (titleId, movieList) => {
     (movie) => movie.id === parseInt(titleId)
   );
   console.log("update Index", update);
-  return update;  
+  return update;
 };
 
 const deleteApiMovie = (movieId, movieList) => {
