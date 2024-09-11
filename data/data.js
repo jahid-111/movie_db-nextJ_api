@@ -381,6 +381,25 @@ const movieList = {
       vote_average: 6.833,
       vote_count: 12,
     },
+    {
+      adult: false,
+      backdrop_path:
+        "https://image.tmdb.org/t/p/original/4Ep2KivIBUZbkS7kHjW7Qywnhhj.jpg",
+      genre_ids: [28],
+      id: 1049948,
+      original_language: "en",
+      original_title: "Vikings: Battle of Heirs",
+      overview:
+        "A young Viking must come to terms with the realization that he may be the King's son, who was switched at birth, but not before others try to take his rightful place.",
+      popularity: 709.463,
+      poster_path:
+        "https://image.tmdb.org/t/p/original/87goLbbqrJqAxqDS5cBsik1zKT.jpg",
+      release_date: "2023-04-28",
+      title: "Vikings: Battle of Heirs",
+      video: false,
+      vote_average: 6.833,
+      vote_count: 12,
+    },
   ],
   total_pages: 43265,
   total_results: 865295,
@@ -391,7 +410,22 @@ const getApiMovies = () => {
 };
 
 const getApiDataId = (id) => {
-  return movieList.results.find((movie) => movie.id == id);
+  return movieList.results.find((movie) => movie.id === parseInt(id));
 };
 
-export { getApiMovies, getApiDataId };
+const updateDataApi = (titleId, movieList) => {
+  const update = movieList.results.findIndex(
+    (movie) => movie.id === parseInt(titleId)
+  );
+  console.log("update Index", update);
+  return update;  
+};
+
+const deleteApiMovie = (movieId, movieList) => {
+  const deleteData = movieList.results.findIndex(
+    (movie) => movie.id === parseInt(movieId)
+  );
+  return deleteData;
+};
+
+export { getApiMovies, getApiDataId, updateDataApi, deleteApiMovie };
