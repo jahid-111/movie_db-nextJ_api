@@ -8,7 +8,7 @@ const NavHead = () => {
   return (
     <nav className="container border-violet-200 flex items-center justify-between space-x-10 py-6 mx-auto">
       <Link href="index.html">
-        <Image src="./assets/logo.svg" width="139" height="26" alt="" />
+        <Image src="./assets/logo.svg" width={150} height={35} alt="" />
       </Link>
 
       <ul className="flex items-center space-x-5">
@@ -17,7 +17,7 @@ const NavHead = () => {
             className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
             href="#"
           >
-            <Image src="./assets/ring.svg" width="24" height="24" alt="" />
+            <Image src="./assets/ring.svg" width={35} height={35} alt="" />
           </Link>
         </li>
         <li>
@@ -25,7 +25,7 @@ const NavHead = () => {
             className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
             href="#"
           >
-            <Image src="./assets/icons/sun.svg" width="24" height="24" alt="" />
+            <Image src="./assets/icons/sun.svg" width={35} height={35} alt="" />
           </Link>
         </li>
         <li>
@@ -35,8 +35,8 @@ const NavHead = () => {
           >
             <Image
               src="./assets/shopping-cart.svg"
-              width="24"
-              height="24"
+              width={35}
+              height={35}
               alt=""
             />
           </Link>
