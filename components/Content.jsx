@@ -7,7 +7,10 @@ const Content = async ({ movies }) => {
     <div className=" container mt-5">
       <div className="  grid sm:grid-cols-2 xl:grid-cols-3 mx-4 gap-7">
         {movies?.map((movie) => (
-          <figure className=" p-4 border-2 bg-green-100 border-black/10 shadow-sm dark:border-white/10 rounded-xl">
+          <figure
+            key={movie.id}
+            className=" p-4 border-2 bg-green-100 border-black/10 shadow-sm dark:border-white/10 rounded-xl"
+          >
             <Image
               className="w-full rounded-sm object-cover"
               src={movie?.poster_path}

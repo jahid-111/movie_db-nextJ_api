@@ -32,6 +32,8 @@ export default function RootLayout({ children, params }) {
           <NavHead lang={lang} />
         </header>
         <main className="">{children}</main>
+
+        <div id="modal-root-content"></div>
       </body>
     </html>
   );
