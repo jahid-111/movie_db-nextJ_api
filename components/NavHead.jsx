@@ -1,10 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import SwitchLang from "./SwitchLang";
 
-const NavHead = () => {
+const NavHead = ({ lang }) => {
   return (
     <nav className="container border-violet-200 flex items-center justify-between space-x-10 py-6 mx-auto">
       <Link href="index.html">
@@ -20,6 +18,9 @@ const NavHead = () => {
             <Image src="./assets/ring.svg" width={35} height={35} alt="" />
           </Link>
         </li>
+
+        <SwitchLang lang={lang} />
+
         <li>
           <Link
             className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
